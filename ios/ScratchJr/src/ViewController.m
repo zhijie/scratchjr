@@ -317,14 +317,14 @@ JSContext *js;
     return [ScratchJr hideSplash:body];
 }
 
-//-(NSString*) analyticsEvent:(NSString*) category :(NSString*) action :(NSString*) label :(NSNumber*) value {
+-(NSString*) analyticsEvent:(NSString*) category :(NSString*) action :(NSString*) label :(NSNumber*) value {
 //    id<GAITracker> tracker = [[GAI sharedInstance] defaultTracker];
 //    [tracker send:[[GAIDictionaryBuilder createEventWithCategory:category
 //        action:action
 //       label:label
 //       value:value] build]];
-//    return @"1";
-//}
+    return @"1";
+}
 
 // iPad name (used for information in the name/sharing dialog to help people using Airdrop)
 - (NSString*) deviceName {
