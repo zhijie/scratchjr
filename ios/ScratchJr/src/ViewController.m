@@ -1,5 +1,5 @@
 #import "ScratchJr.h"
-#import <Google/Analytics.h>
+//#import <Google/Analytics.h>
 // @import MessageUI;
 
 
@@ -130,9 +130,9 @@ JSContext *js;
     NSArray<NSString*>* parts = [screenString componentsSeparatedByString:@"/"];
 
     // Track an Analytics pageview
-    id<GAITracker> tracker = [[GAI sharedInstance] defaultTracker];
-    [tracker set:kGAIScreenName value:[parts lastObject]];
-    [tracker send:[[GAIDictionaryBuilder createScreenView] build]];
+//    id<GAITracker> tracker = [[GAI sharedInstance] defaultTracker];
+//    [tracker set:kGAIScreenName value:[parts lastObject]];
+//    [tracker send:[[GAIDictionaryBuilder createScreenView] build]];
 
 }
 
@@ -317,14 +317,14 @@ JSContext *js;
     return [ScratchJr hideSplash:body];
 }
 
--(NSString*) analyticsEvent:(NSString*) category :(NSString*) action :(NSString*) label :(NSNumber*) value {
-    id<GAITracker> tracker = [[GAI sharedInstance] defaultTracker];
-    [tracker send:[[GAIDictionaryBuilder createEventWithCategory:category
-        action:action
-       label:label
-       value:value] build]];
-    return @"1";
-}
+//-(NSString*) analyticsEvent:(NSString*) category :(NSString*) action :(NSString*) label :(NSNumber*) value {
+//    id<GAITracker> tracker = [[GAI sharedInstance] defaultTracker];
+//    [tracker send:[[GAIDictionaryBuilder createEventWithCategory:category
+//        action:action
+//       label:label
+//       value:value] build]];
+//    return @"1";
+//}
 
 // iPad name (used for information in the name/sharing dialog to help people using Airdrop)
 - (NSString*) deviceName {
